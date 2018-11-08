@@ -59,6 +59,7 @@ import org.apache.hadoop.hive.serde2.typeinfo.TypeInfo;
 import org.apache.hadoop.hive.serde2.typeinfo.TypeInfoUtils;
 import org.apache.hadoop.hive.shims.Hadoop23Shims;
 import org.apache.hadoop.hive.shims.HadoopShimsSecure;
+import org.apache.hadoop.hive.llap.io.api.LlapProxy;
 import org.apache.hadoop.mapreduce.InputFormat;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.OutputFormat;
@@ -398,7 +399,7 @@ public class OrcStorage extends LoadFunc implements StoreFuncInterface, LoadMeta
     public List<String> getShipFiles() {
         Class[] classList = new Class[] {OrcFile.class, HiveConf.class, AbstractSerDe.class,
                 org.apache.hadoop.hive.shims.HadoopShims.class, HadoopShimsSecure.class, Hadoop23Shims.class,
-                Input.class};
+                Input.class, LlapProxy.class};
         return FuncUtils.getShipFiles(classList);
     }
 

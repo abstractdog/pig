@@ -531,6 +531,8 @@
       conf="compile->master" />
     <dependency org="org.apache.hive" name="hive-common" rev="${hive.version}" changing="true"
       conf="compile->master" />
+    <dependency org="org.apache.hive" name="hive-llap-client" rev="${hive2.version}" changing="true"
+      conf="compile->master" />
     <dependency org="org.apache.hive.shims" name="hive-shims-common" rev="${hive.version}" changing="true"
       conf="compile->master" />
     <dependency org="org.apache.hive" name="hive-contrib" rev="${hive.version}" changing="true"
